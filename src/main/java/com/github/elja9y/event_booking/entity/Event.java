@@ -35,6 +35,6 @@ public class Event {
     @Column(nullable = false)
     private int bookedCount = 0;
 
-    //@OneToMany(mappedBy = "event", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    //private List<Booking> bookings;
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Booking> bookings;
 }
